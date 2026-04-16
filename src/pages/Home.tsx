@@ -1,11 +1,11 @@
 import { Hero } from "@/components/sections/Hero";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { OneStop } from "@/components/sections/OneStop";
+import { Stats } from "@/components/sections/Stats";
 import { FeaturePanel } from "@/components/sections/FeaturePanel";
 import { Services } from "@/components/sections/Services";
 import { WhyChoose } from "@/components/sections/WhyChoose";
 import { Process } from "@/components/sections/Process";
-import { Stats } from "@/components/sections/Stats";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
 import { ServiceArea } from "@/components/sections/ServiceArea";
@@ -21,9 +21,9 @@ export default function Home() {
         <Hero />
         <TrustStrip />
         <OneStop />
+        <Stats />
         <FeaturePanel />
         <Services />
-        <Stats />
         <WhyChoose />
         <Process />
         <Testimonials />
