@@ -3,26 +3,26 @@ import { site } from "@/config/site";
 
 export function ServiceArea() {
   return (
-    <section className="section-pad bg-muted/30">
+    <section className="section-pad-sm">
       <div className="container-x">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-3xl text-center">
           <span className="eyebrow">Service Area</span>
-          <h2 className="mt-4 font-display text-4xl font-extrabold tracking-tight text-brand-black sm:text-5xl">
-            Where we work.
+          <h2 className="display-lg mt-5 text-brand-navy">
+            Where we <em className="italic text-brand-red">work</em>.
           </h2>
-          <p className="mt-4 text-base text-brand-black/60">
-            Based in {site.address.split(",").slice(-2).join(",")}, serving the greater metro area.
+          <p className="mt-4 font-grotesk text-[17px] leading-relaxed text-brand-navy/55">
+            Based in {site.address.split(",").slice(-2).join(",").trim()}, serving the greater metro area.
           </p>
         </div>
 
-        <div className="mx-auto mt-12 grid max-w-3xl gap-3 sm:grid-cols-2 md:grid-cols-3">
+        <div className="mx-auto mt-14 flex max-w-3xl flex-wrap items-center justify-center gap-3">
           {site.serviceCities.map((c) => (
             <div
               key={c}
-              className="flex items-center gap-3 rounded-xl border border-black/5 bg-white px-4 py-3"
+              className="inline-flex items-center gap-2 rounded-full border border-brand-navy/15 bg-brand-paper px-5 py-2.5 font-grotesk text-sm font-medium text-brand-navy"
             >
-              <MapPin className="h-4 w-4 text-brand-yellowDark" />
-              <span className="font-medium text-brand-black">{c}</span>
+              <MapPin className="h-3.5 w-3.5 text-brand-red" />
+              {c}
             </div>
           ))}
         </div>

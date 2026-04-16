@@ -1,47 +1,43 @@
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 import { testimonials } from "@/config/site";
 
 export function Testimonials() {
   return (
-    <section id="reviews" className="section-pad bg-muted/30">
+    <section id="reviews" className="section-pad bg-brand-creamDeep/40">
       <div className="container-x">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-3xl text-center">
           <span className="eyebrow">Reviews</span>
-          <h2 className="mt-4 font-display text-4xl font-extrabold tracking-tight text-brand-black sm:text-5xl">
-            What our customers say.
+          <h2 className="display-xl mt-5 text-brand-navy">
+            What customers <em className="italic text-brand-red">actually</em> say.
           </h2>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
+        <div className="mt-20 grid gap-8 md:grid-cols-2">
           {testimonials.map((t) => (
             <figure
               key={t.name}
-              className="relative rounded-2xl border border-black/5 bg-white p-8 shadow-sm"
+              className="rounded-[28px] bg-brand-paper p-8 shadow-card lg:p-10"
             >
-              <Quote
-                aria-hidden
-                className="absolute right-6 top-6 h-10 w-10 text-brand-yellow/30"
-              />
-              <div className="mb-4 flex gap-1 text-brand-yellow">
+              <div className="mb-5 flex gap-0.5 text-brand-red">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star key={i} className="h-4 w-4 fill-current" />
                 ))}
               </div>
-              <blockquote className="text-base leading-relaxed text-brand-black">
+              <blockquote className="font-display text-[22px] leading-snug tracking-tight text-brand-navy lg:text-[26px]">
                 "{t.quote}"
               </blockquote>
-              <figcaption className="mt-5 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-black text-xs font-bold text-brand-yellow">
+              <figcaption className="mt-6 flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-navy font-grotesk text-xs font-bold text-brand-cream">
                   {t.name
                     .split(" ")
                     .map((n) => n[0])
                     .join("")}
                 </div>
-                <div>
-                  <div className="text-sm font-semibold text-brand-black">
+                <div className="font-grotesk">
+                  <div className="text-sm font-semibold text-brand-navy">
                     {t.name}
                   </div>
-                  <div className="text-xs text-brand-black/60">{t.role}</div>
+                  <div className="text-xs text-brand-navy/55">{t.role}</div>
                 </div>
               </figcaption>
             </figure>

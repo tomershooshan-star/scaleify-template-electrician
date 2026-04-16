@@ -1,49 +1,32 @@
-import {
-  Award, BadgeDollarSign, Timer, ShieldCheck, Sparkles, Truck,
-  type LucideIcon,
-} from "lucide-react";
 import { whyChoose } from "@/config/site";
-
-const iconMap: Record<string, LucideIcon> = {
-  Award, BadgeDollarSign, Timer, ShieldCheck, Sparkles, Truck,
-};
 
 export function WhyChoose() {
   return (
-    <section id="why" className="section-pad bg-white">
+    <section id="why" className="section-pad">
       <div className="container-x">
-        <div className="grid gap-12 lg:grid-cols-[1fr_2fr]">
-          <div>
+        <div className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="lg:sticky lg:top-28">
             <span className="eyebrow">Why Choose VoltSafe</span>
-            <h2 className="mt-4 font-display text-4xl font-extrabold tracking-tight text-brand-black sm:text-5xl">
-              Safer, faster, cleaner work — guaranteed.
+            <h2 className="display-xl mt-5 text-brand-navy">
+              Safer, <em className="italic text-brand-red">faster</em>, cleaner work.
             </h2>
-            <p className="mt-4 text-base text-brand-black/60">
+            <p className="mt-6 max-w-md font-grotesk text-[17px] leading-relaxed text-brand-navy/55">
               We built this company on the belief that electrical work should be boring: on time, on budget, safely done, and warrantied.
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            {whyChoose.map((item) => {
-              const Icon = iconMap[item.icon] ?? Award;
-              return (
-                <div
-                  key={item.title}
-                  className="flex gap-4 rounded-2xl border border-black/5 bg-muted/50 p-5"
-                >
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-yellow text-brand-black">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-display text-base font-bold text-brand-black">
-                      {item.title}
-                    </h3>
-                    <p className="mt-1 text-sm text-brand-black/60">{item.desc}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <ul className="divide-y divide-brand-navy/10 border-t border-brand-navy/10">
+            {whyChoose.map((item) => (
+              <li key={item.title} className="py-7">
+                <h3 className="font-grotesk text-xl font-semibold text-brand-navy">
+                  {item.title}
+                </h3>
+                <p className="mt-2 max-w-xl font-grotesk text-[15px] leading-relaxed text-brand-navy/55">
+                  {item.desc}
+                </p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

@@ -4,25 +4,28 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 rounded-full text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center gap-2 rounded-full font-grotesk font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
-        primary:
-          "bg-brand-yellow text-brand-black hover:bg-brand-yellowDark focus-visible:ring-brand-yellow",
-        dark: "bg-brand-black text-white hover:bg-brand-charcoal focus-visible:ring-brand-black",
+        red:
+          "bg-brand-red text-brand-cream hover:bg-brand-redDark focus-visible:ring-brand-red focus-visible:ring-offset-brand-cream shadow-[0_8px_24px_-8px_rgba(228,67,44,0.55)]",
+        dark:
+          "bg-brand-navy text-brand-cream hover:bg-brand-navyDeep focus-visible:ring-brand-navy focus-visible:ring-offset-brand-cream",
         outline:
-          "border-2 border-brand-black/10 bg-white text-brand-black hover:border-brand-black/30 focus-visible:ring-brand-black",
+          "border border-brand-navy/20 bg-transparent text-brand-navy hover:border-brand-navy/50 hover:bg-brand-navy/5",
+        outlineLight:
+          "border border-brand-cream/25 bg-transparent text-brand-cream hover:border-brand-cream/60 hover:bg-brand-cream/5",
         ghost:
-          "bg-transparent text-brand-black hover:bg-brand-black/5 focus-visible:ring-brand-black",
+          "bg-transparent text-brand-navy hover:bg-brand-navy/5",
       },
       size: {
-        sm: "h-9 px-4 text-xs",
-        md: "h-11 px-6",
-        lg: "h-14 px-8 text-base",
+        sm: "h-9 px-5 text-[13px]",
+        md: "h-11 px-6 text-sm",
+        lg: "h-14 px-8 text-[15px]",
       },
     },
-    defaultVariants: { variant: "primary", size: "md" },
+    defaultVariants: { variant: "red", size: "md" },
   }
 );
 

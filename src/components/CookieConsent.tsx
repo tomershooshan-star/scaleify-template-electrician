@@ -11,7 +11,7 @@ export function CookieConsent() {
   useEffect(() => {
     try {
       if (!localStorage.getItem(STORAGE_KEY)) {
-        const t = setTimeout(() => setShow(true), 1200);
+        const t = setTimeout(() => setShow(true), 1400);
         return () => clearTimeout(t);
       }
     } catch {
@@ -29,16 +29,14 @@ export function CookieConsent() {
   if (!show) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 z-50 mx-auto max-w-3xl rounded-2xl border border-black/10 bg-white p-4 shadow-2xl sm:p-5 md:bottom-6 md:left-6 md:right-6">
+    <div className="fixed bottom-4 left-4 right-4 z-50 mx-auto max-w-3xl rounded-2xl border border-brand-navy/10 bg-brand-paper p-4 shadow-soft sm:p-5 md:bottom-6 md:left-6 md:right-6">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-        <div className="flex shrink-0 items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-brand-yellow text-brand-black">
-            <Cookie className="h-5 w-5" />
-          </div>
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-navy text-brand-red">
+          <Cookie className="h-5 w-5" />
         </div>
-        <div className="flex-1 text-sm text-brand-black/70">
+        <div className="flex-1 font-grotesk text-sm text-brand-navy/70">
           We use cookies to improve your experience and measure site performance. See our{" "}
-          <Link to="/privacy" className="font-semibold text-brand-black underline underline-offset-2">
+          <Link to="/privacy" className="font-semibold text-brand-navy underline underline-offset-2">
             Privacy Policy
           </Link>
           .
