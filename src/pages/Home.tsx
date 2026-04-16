@@ -8,7 +8,6 @@ import { Stats } from "@/components/sections/Stats";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
 import { ServiceArea } from "@/components/sections/ServiceArea";
-import { FinalCTA } from "@/components/sections/FinalCTA";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Footer } from "@/components/sections/Footer";
 import { SEO, localBusinessJsonLd } from "@/components/SEO";
@@ -28,7 +27,6 @@ export default function Home() {
         <Testimonials />
         <FAQ />
         <ServiceArea />
-        <FinalCTA />
         <ContactForm />
       </main>
       <Footer />
