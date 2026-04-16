@@ -15,7 +15,7 @@ export function OneStop() {
           {/* LEFT: single tall photograph */}
           <div className="relative overflow-hidden rounded-[28px] shadow-card">
             <img
-              src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=85"
+              src="https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b?auto=format&fit=crop&w=1200&q=85"
               alt="Licensed electrician at work"
               className="h-[420px] w-full object-cover lg:h-[520px]"
               loading="lazy"

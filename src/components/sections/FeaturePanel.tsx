@@ -50,7 +50,7 @@ export function FeaturePanel() {
               {/* Back/large photo — upper right */}
               <div className="absolute right-0 top-0 w-[70%] overflow-hidden rounded-[22px] shadow-soft ring-1 ring-brand-cream/10">
                 <img
-                  src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=85"
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=85"
                   alt=""
                   className="h-72 w-full object-cover lg:h-[22rem]"
                   loading="lazy"
@@ -59,7 +59,7 @@ export function FeaturePanel() {
               {/* Middle photo — lower left, overlapping */}
               <div className="absolute bottom-10 left-0 w-[56%] overflow-hidden rounded-[22px] shadow-soft ring-1 ring-brand-cream/10">
                 <img
-                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=700&q=85"
+                  src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=700&q=85"
                   alt=""
                   className="h-60 w-full object-cover lg:h-72"
                   loading="lazy"
@@ -68,7 +68,7 @@ export function FeaturePanel() {
               {/* Small accent photo — bottom right corner */}
               <div className="absolute bottom-0 right-4 hidden w-[38%] overflow-hidden rounded-[18px] shadow-soft ring-1 ring-brand-cream/10 sm:block">
                 <img
-                  src="https://images.unsplash.com/photo-1580901368919-7738efb0f87e?auto=format&fit=crop&w=500&q=85"
+                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=500&q=85"
                   alt=""
                   className="h-44 w-full object-cover lg:h-52"
                   loading="lazy"
