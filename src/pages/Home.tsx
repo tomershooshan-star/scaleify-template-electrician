@@ -1,5 +1,6 @@
 import { Hero } from "@/components/sections/Hero";
 import { TrustStrip } from "@/components/sections/TrustStrip";
+import { OneStop } from "@/components/sections/OneStop";
 import { FeaturePanel } from "@/components/sections/FeaturePanel";
 import { Services } from "@/components/sections/Services";
 import { WhyChoose } from "@/components/sections/WhyChoose";
@@ -19,6 +20,7 @@ export default function Home() {
       <main>
         <Hero />
         <TrustStrip />
+        <OneStop />
         <FeaturePanel />
         <Services />
         <Stats />
