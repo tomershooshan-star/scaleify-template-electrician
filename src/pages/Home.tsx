@@ -1,5 +1,3 @@
-import { DealsBanner } from "@/components/sections/DealsBanner";
-import { Navigation } from "@/components/sections/Navigation";
 import { Hero } from "@/components/sections/Hero";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { Services } from "@/components/sections/Services";
@@ -19,8 +17,6 @@ export default function Home() {
   return (
     <>
       <SEO path="/" jsonLd={localBusinessJsonLd()} />
-      <DealsBanner />
-      <Navigation />
       <main>
         <Hero />
         <TrustStrip />
