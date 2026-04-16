@@ -55,7 +55,7 @@
 
 @layer components {
   .container-x {
-    @apply mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12;
+    @apply mx-auto w-full max-w-[1600px] px-5 sm:px-6 lg:px-8 xl:px-10;
   }
 
   /* Buttons — pill, restrained, confident */
@@ -92,12 +92,12 @@
     letter-spacing: -0.03em;
   }
 
-  /* Section rhythm — breathing room */
+  /* Section rhythm — tighter vertical, wider horizontal */
   .section-pad {
-    @apply py-24 sm:py-32 lg:py-40;
+    @apply py-16 sm:py-20 lg:py-24;
   }
   .section-pad-sm {
-    @apply py-16 sm:py-20 lg:py-24;
+    @apply py-10 sm:py-12 lg:py-14;
   }
 
   /* Rounded card container for section-level blocks */

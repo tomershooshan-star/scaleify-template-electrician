@@ -76,17 +76,48 @@ export function ContactForm() {
         </div>
 
         {/* Form block — flows directly from the red poster, tighter spacing */}
-        <div id="contact-form" className="mt-16 grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
+        <div id="contact-form" className="mt-14 grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
           <div>
             <span className="eyebrow">Get In Touch</span>
             <h3 className="display-lg mt-5 text-brand-navy">
               Request a <em className="italic text-brand-red">free estimate</em>.
             </h3>
-            <p className="mt-6 max-w-md font-grotesk text-[17px] leading-relaxed text-brand-navy/55">
+            <p className="mt-5 max-w-md font-grotesk text-[17px] leading-relaxed text-brand-navy/55">
               Tell us what's going on and we'll call back within 15 minutes during business hours — or first thing next morning if sent overnight.
             </p>
 
-            <dl className="mt-12 space-y-5">
+            {/* Visual anchor — photo + overlay */}
+            <div className="relative mt-8 aspect-[5/3] w-full overflow-hidden rounded-[24px] shadow-card">
+              <img
+                src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=85"
+                alt=""
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+              <div
+                aria-hidden
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(200deg, rgba(15,21,32,0) 40%, rgba(15,21,32,0.85) 100%)",
+                }}
+              />
+              <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between gap-4">
+                <div>
+                  <div className="font-display text-2xl italic text-brand-cream">
+                    Real humans. Fast response.
+                  </div>
+                  <div className="mt-1 font-grotesk text-xs text-brand-cream/70">
+                    Average reply time: under 15 minutes
+                  </div>
+                </div>
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-red text-brand-cream">
+                  <Phone className="h-4 w-4" />
+                </div>
+              </div>
+            </div>
+
+            <dl className="mt-8 grid gap-4 sm:grid-cols-2">
               <ContactRow icon={Phone} label="Phone" value={site.phone} href={`tel:${site.phoneRaw}`} />
               <ContactRow icon={Mail} label="Email" value={site.email} href={`mailto:${site.email}`} />
               <ContactRow icon={MapPin} label="Address" value={site.address} />
