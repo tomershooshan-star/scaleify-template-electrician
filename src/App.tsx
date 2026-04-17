@@ -5,6 +5,7 @@ import Terms from "@/pages/Terms";
 import NotFound from "@/pages/NotFound";
 import { CookieConsent } from "@/components/CookieConsent";
 import { Chatbot } from "@/components/Chatbot";
+import { FloatingQuote } from "@/components/FloatingQuote";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/terms" element={<Terms />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <FloatingQuote />
       <CookieConsent />
       <Chatbot />
     </>

@@ -1,3 +1,4 @@
+import { UtilityBar } from "@/components/UtilityBar";
 import { Hero } from "@/components/sections/Hero";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { OneStop } from "@/components/sections/OneStop";
@@ -17,6 +18,7 @@ export default function Home() {
   return (
     <>
       <SEO path="/" jsonLd={localBusinessJsonLd()} />
+      <UtilityBar />
       <main>
         <Hero />
         <TrustStrip />
