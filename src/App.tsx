@@ -6,10 +6,12 @@ import NotFound from "@/pages/NotFound";
 import { CookieConsent } from "@/components/CookieConsent";
 import { Chatbot } from "@/components/Chatbot";
 import { FloatingQuote } from "@/components/FloatingQuote";
+import { ScrollManager } from "@/components/ScrollManager";
 
 export default function App() {
   return (
     <>
+      <ScrollManager />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/privacy" element={<Privacy />} />
